@@ -4,6 +4,7 @@ const express = require('express')
 const fs = require('fs')
 const ejs = require('ejs')
 const path = require('path')
+const valiables = require('./valiables')
 //const cookieParser = require('cookie-parser')
 //const session = require('express-session')
 const app = express()
@@ -21,10 +22,10 @@ app.use(session({
 */
 app.get('/', (req, res) => {
   //let cnt = req.session.cnt == undefined ? 0 : req.session.cnt
-  const cnt = 5
+  //const cnt = 5
   //cnt++
   //req.session.cnt = cnt
-  res.render('temp.ejs', { cnt })
+  res.render('temp.ejs', { cnt: valiables.cnt })
 })
 
 /*
