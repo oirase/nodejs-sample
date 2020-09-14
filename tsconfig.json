@@ -4,6 +4,12 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true ,
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "outDir": "./public",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/*.ts"
+  ]
 }
