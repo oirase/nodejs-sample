@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar __importDefault = this && this.__importDefault || function (mod) {\n  return mod && mod.__esModule ? mod : {\n    \"default\": mod\n  };\n};\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar express_1 = __importDefault(__webpack_require__(/*! express */ \"./node_modules/express/index.js\"));\n\nvar app = express_1[\"default\"]();\nvar port = 3000;\napp.get('/', function (req, res) {\n  var data = {\n    message: 'Hello'\n  };\n  res.send(data);\n});\napp.listen(port, function () {\n  console.log('server start');\n});\n\n//# sourceURL=webpack:///./node_modules/express/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n\n\n//# sourceURL=webpack:///./node_modules/express/index.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("\n\nvar __importDefault = this && this.__importDefault || function (mod) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()()\nconst port = 3000\n\napp.get('/', (req, res) => {\n    const data = { message: 'Hello' }\n    res.send(data)\n})\n\napp.listen(port, () => {\n  console.log('server start')\n})\n\n\n//# sourceURL=webpack:///./src/main.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()()\nconst port = 3000\nconst test = 'test'\n\napp.get('/', (req, res) => {\n    const data = { message: 'Hello' }\n    res.send(data)\n})\n\napp.listen(port, () => {\n  console.log('server start')\n})\n\n\n//# sourceURL=webpack:///./src/main.ts?");
 
 /***/ })
 
