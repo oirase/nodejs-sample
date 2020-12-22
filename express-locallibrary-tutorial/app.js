@@ -10,8 +10,8 @@ var catalogRouter = require('./routes/catalog')
 
 var app = express();
 var mongoose = require('mongoose');
-var mongoDB = 'insert_your_database_url_here';
-mongoose.connect(mongoDB);
+var mongoDB = 'mongodb://0.0.0.0';
+mongoose.connect(mongoDB,  { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
