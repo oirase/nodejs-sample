@@ -8,7 +8,7 @@ var book_instance_controller = require('../controllers/bookinstanceController')
 
 router.get('/', book_controller.index)
 
-router.get('/book/create', book_controller.create_get)
+router.get('/book/create', book_controller.book_create_get)
 
 router.post('book/create', book_controller.book_create_post)
 
@@ -51,8 +51,8 @@ router.get('/author/:id/update', author_controller.author_update_get);
 router.post('/author/:id/update', author_controller.author_update_post);
 
 // GET request for one Author.
-router.get('/author/:id', author_controller.author_detail);
-
+router.get('/author/:id', author_controller.auth_delete);
+.
 // GET request for list of all Authors.
 router.get('/authors', author_controller.author_list);
 

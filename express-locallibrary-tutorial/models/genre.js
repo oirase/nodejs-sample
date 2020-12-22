@@ -13,7 +13,7 @@ var GenreScheme = new Schema({
 
 GenreScheme
 .virtual('url')
-get(function() {
+.get(function() {
   return '/catalog/genre/' + this._id
 })
 
