@@ -16,9 +16,9 @@ exports.index = function(req, res) {
     countData(BookInstance.countDocuments, {status:'Available'}),
     countData(Author.countDocuments),
     countData(Genre.countDocuments)
-  ]).then((results, err) {
+  ]).then((results, err) => {
     res.render('index', { title: 'Local Library Home', error: err, data: results})
-  }
+  })
 }
 
 // Display list of all books.
