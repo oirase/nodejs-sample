@@ -1,0 +1,6 @@
+FROM mongo:latest
+RUN apk add npm --no-cache
+CP package.json .
+RUN npm install
+CP sever.js .
+CMD ["npm", "start"]

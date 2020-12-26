@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile_web
+    volumes:
+      - .:.
+    networks:
+      - net1
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile_db
+      networks:
+        - net1
+networks:
+  net1:
+    driver: bridge
+
+
