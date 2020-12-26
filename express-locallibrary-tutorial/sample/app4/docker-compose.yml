@@ -1,21 +1,16 @@
 version: "3"
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile_web
+    image: mongo:latest
     container_name: "web"
-    depends_on:
-      - db
     links:
       - db
     networks:
       - net1
   db:
-    build:
-      context: .
-      dockerfile: Dockerfile_db
+    image: mongo:latest
     container_name: "db"
+    command: mongod &
     networks:
       - net1
 networks:
