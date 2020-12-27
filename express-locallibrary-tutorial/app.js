@@ -11,7 +11,8 @@ var catalogRouter = require('./routes/catalog')
 var app = express();
 var mongoose = require('mongoose');
 
-var mongoDB = 'mongodb://0.0.0.0';
+//var mongoDB = 'mongodb://0.0.0.0';
+var mongoDB = 'mongodb://db';
 mongoose.connect(mongoDB,  { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;

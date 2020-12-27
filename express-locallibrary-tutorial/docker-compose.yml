@@ -1,8 +1,23 @@
 version: "3"
 services:
-  db:
-    build:
-      context: "/"
-      dockerfile: "Dockerfile"
+  web:
+    build: .
+    container_name: "web"
+    volumes:
+      - .:/web
     ports:
-      - 27017:27017
+      - "3000:3000"
+    tty: true
+    networks:
+      - net1
+  db:
+    image: mongo:latest
+    container_name: "db"
+    command: mongod
+    networks:
+      - net1
+networks:
+  net1:
+    driver: bridge
+
+

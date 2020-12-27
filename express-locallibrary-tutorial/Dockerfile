@@ -1,2 +1,3 @@
-FROM mongo:latest
-CMD ["mongod"]
+FROM node:slim
+WORKDIR /web
+RUN npm install && npm i async

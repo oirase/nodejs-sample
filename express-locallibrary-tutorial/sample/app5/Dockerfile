@@ -1,3 +1,3 @@
 FROM node:slim
 WORKDIR /web
-RUN npm install && npm cache clean --force
+RUN npm install
