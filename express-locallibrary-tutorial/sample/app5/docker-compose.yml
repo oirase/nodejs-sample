@@ -4,7 +4,9 @@ services:
     build: .
     container_name: "web"
     volumes:
-      - .:/app
+      - .:/web
+    ports:
+      - "3000:3000"
     networks:
       - net1
   db:

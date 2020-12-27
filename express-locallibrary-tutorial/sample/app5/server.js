@@ -6,7 +6,7 @@ const path = require('path')
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-mongoDB = 'mongodb://0.0.0.0/study';
+mongoDB = 'mongodb://db/study';
 mongoose.connect(mongoDB,  { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
@@ -22,3 +22,5 @@ artbook.save().then(() => console.log('success'))
 app.use('/', function(res,req) {
   res.render('index', { count: artbook.countDocuments })
 })
+
+app.listen(3000)
