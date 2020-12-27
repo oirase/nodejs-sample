@@ -1,3 +1,5 @@
 FROM node:slim
 WORKDIR /web
-RUN npm install && npm i async
+COPY . .
+RUN npm install && node populatedb db
+CMD ["node", "./bin/www"]
