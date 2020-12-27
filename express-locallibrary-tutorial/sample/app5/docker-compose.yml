@@ -1,16 +1,16 @@
 version: "3"
 services:
   web:
-    image: mongo:latest
+    build: .
     container_name: "web"
-    links:
-      - db
+    volumes:
+      - .:/app
     networks:
       - net1
   db:
     image: mongo:latest
     container_name: "db"
-    entrypoint: mongod
+    command: mongod
     networks:
       - net1
 networks:
