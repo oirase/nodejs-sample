@@ -1,4 +1,2 @@
-
-apk add npm
-npm install
-npm run start
+node populatedb mongodb://db
+node ./bin/www
