@@ -2,5 +2,10 @@ extends layout
 
 block content
   form(action='/contact', method='post')
-    input(type='email', name='username')
-    input(type='password', name='password')
+    label email
+    input(type='text', name='username')
+    br
+    label password
+    input(type='text', name='password')
+    br
+    button(type='submit') push
