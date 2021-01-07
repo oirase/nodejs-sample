@@ -1,5 +1,5 @@
 FROM node:current-slim
 WORKDIR /app
-CP . .
+COPY . .
 RUN npm install
 CMD ["npm", "start"]
