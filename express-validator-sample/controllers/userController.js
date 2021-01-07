@@ -5,14 +5,15 @@ exports.index= function(req, res, next){
 }
 
 exports.index_post = [
-body('username').isEmail(),
-body('password').isLength({ min: 5 }),
+body('username').isEmail().withMessage('First name must be specified.'),
+body('password').isAlphanumeric(),
 function(req, res, next){
   const errors = validationResult(req)
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
     }
-    res.send('success!!')
+
+    res.render('index', { status: 'success', request: req, response: res })
   }
 ]
 
