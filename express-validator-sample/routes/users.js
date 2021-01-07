@@ -3,8 +3,8 @@ var router = express.Router();
 const userController = require('../controllers/userController')
 
 /* GET users listing. */
-router.get('/contact', userController.index);
+router.get('/', userController.index);
 
-router.post('/contact', userController.index_post)
+router.post('/', userController.index_post)
 
 module.exports = router;
