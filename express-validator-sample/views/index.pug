@@ -1,7 +1,8 @@
 extends layout
 
-- console.log(request)
-- console.log(response)
+script
+  | console.log(request)
+  | console.log(response)
 
 block content
   form(action='/users', method='post')
